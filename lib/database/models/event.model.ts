@@ -1,4 +1,4 @@
-import { model, models, Schema } from "mongoose";
+import { Document, Schema, model, models } from "mongoose";
 
 export interface IEvent extends Document {
   _id: string;
@@ -18,7 +18,7 @@ export interface IEvent extends Document {
 
 const EventSchema = new Schema({
   title: { type: String, required: true },
-  description: { type: String, required: true },
+  description: { type: String },
   location: { type: String },
   createdAt: { type: Date, default: Date.now },
   imageUrl: { type: String, required: true },
