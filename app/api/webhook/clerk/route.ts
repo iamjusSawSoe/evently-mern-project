@@ -82,6 +82,8 @@ export async function POST(req: Request) {
       });
     }
 
+    console.log(newUser, "from route.ts");
+
     return NextResponse.json({ message: "OK", user: newUser });
   }
 
